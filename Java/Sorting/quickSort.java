@@ -15,7 +15,7 @@ public class Main {
             return;
         }
 
-        int pivot = partition(intArr, start, end);  // position of pivot
+        int pivot = partition(arr, start, end);  // position of pivot
         quickSort(arr, start, pivot);  // sort left subarray
         quickSort(arr, pivot+1, end);  // sort right subarray
     }
