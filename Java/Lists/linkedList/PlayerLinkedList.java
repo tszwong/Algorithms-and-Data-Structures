@@ -30,7 +30,7 @@ public class PlayerLinkedList {
 
     public void printList() {
         PlayerNode current = head;
-        System.out.println("Head -->");
+        System.out.print("Head -->");
 
         while (current != null) {
             System.out.print(current);
