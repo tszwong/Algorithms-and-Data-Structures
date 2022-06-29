@@ -15,7 +15,7 @@ public class Main {
         stack.push(klayThompson);
         stack.push(draymondGreen);
         stack.printStack();
-        System.out.println("Size of stack: "stack.size() + "\n");
+        System.out.println("Size of stack: " + stack.size() + "\n");
 
         System.out.println("Item poped: " + stack.pop());
         System.out.println();
