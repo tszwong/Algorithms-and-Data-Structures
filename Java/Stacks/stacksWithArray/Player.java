@@ -57,7 +57,5 @@ public class Player {
                 ", id=" + id +
                 '}';
     }
-
-    public static void main(String[] args) {
-    }
+    
 }
