@@ -14,7 +14,7 @@ public class LLQueue {
     }
 
     public Player remove() {
-        Player remove_node = queue.getLast();
+        Player remove_node = queue.getFirst();
         queue.removeFirst();
         return remove_node;
     }
