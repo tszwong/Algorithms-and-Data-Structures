@@ -45,5 +45,7 @@ class ArrayQueue:
             if i != None:
                 queue += str(i)
                 queue += ", "
+                
+        queue += "BACK"
 
         return queue
