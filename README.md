@@ -5,5 +5,5 @@ Implementation of Data Structures & Algorithms in Java and Python </br>
 2. Linked Lists
 3. Queues
 4. Stacks
-5. Hashtables
+5. Hash Tables
 6. Sorting Algorithms
