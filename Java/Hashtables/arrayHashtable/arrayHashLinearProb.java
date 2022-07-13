@@ -1,8 +1,8 @@
 public class arrayHash {
-    private storedPlayer[] hashtable;
+    private StoredPlayer[] hashtable;
 
     public arrayHash() {
-        hashtable = new storedPlayer[8];
+        hashtable = new StoredPlayer[8];
     }
 
     // adding items into the hashtable, implementation doesn't handle collisions
@@ -28,7 +28,7 @@ public class arrayHash {
             System.out.println("Sorry, there's already a player at position "
                                 + hashedKey);
         } else {
-            hashtable[hashedKey] = new storedPlayer(key, player);
+            hashtable[hashedKey] = new StoredPlayer(key, player);
         }
     }
 
@@ -47,8 +47,8 @@ public class arrayHash {
         } else {
             Player removedPlayer = hashtable[hashedKey].player;
             hashtable[hashedKey] = null;
-            storedPlayer[] oldHashtable = hashtable;
-            hashtable = new storedPlayer[oldHashtable.length];
+            StoredPlayer[] oldHashtable = hashtable;
+            hashtable = new StoredPlayer[oldHashtable.length];
 
             for (int i = 0; i < oldHashtable.length; i++) {
                 if (oldHashtable[i] != null) {
