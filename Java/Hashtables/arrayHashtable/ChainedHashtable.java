@@ -2,25 +2,25 @@ import java.util.LinkedList;
 import java.util.ListIterator;
 
 public class ChainedHashtable {
-    private LinkedList<storedPlayer>[] hashtable;
+    private LinkedList<StoredPlayer>[] hashtable;
 
     public ChainedHashtable() {
         hashtable = new LinkedList[10];
         for (int i = 0; i < hashtable.length; i++) {
-            hashtable[i] = new LinkedList<storedPlayer>();
+            hashtable[i] = new LinkedList<StoredPlayer>();
         }
     }
 
     public void put(String key, Player player) {
         int hashedKey = hashKey(key);
-        hashtable[hashedKey].add(new storedPlayer(key, player));
+        hashtable[hashedKey].add(new StoredPlayer(key, player));
     }
 
     public Player get(String key) {
         int hashedKey = hashKey(key);  // rehashing key
 
-        ListIterator<storedPlayer> iterator = hashtable[hashedKey].listIterator();
-        storedPlayer player = null;
+        ListIterator<StoredPlayer> iterator = hashtable[hashedKey].listIterator();
+        StoredPlayer player = null;
 
         while (iterator.hasNext()) {
             player = iterator.next();
@@ -37,8 +37,8 @@ public class ChainedHashtable {
 
         // set the location we look at to the section of the array that contains the
         // linked list with the specific length of the hashed key
-        ListIterator<storedPlayer> iterator = hashtable[hashedKey].listIterator();
-        storedPlayer player = null;  // initialize player object
+        ListIterator<StoredPlayer> iterator = hashtable[hashedKey].listIterator();
+        StoredPlayer player = null;  // initialize player object
         int index = -1;
 
         while (iterator.hasNext()) {
@@ -69,7 +69,7 @@ public class ChainedHashtable {
                 System.out.println("Position " + i + ": empty");
             } else {
                 System.out.print("Position " + i + ": ");
-                ListIterator<storedPlayer> iterator = hashtable[i].listIterator();
+                ListIterator<StoredPlayer> iterator = hashtable[i].listIterator();
 
                 while (iterator.hasNext()) {
                     System.out.print(iterator.next().player);
