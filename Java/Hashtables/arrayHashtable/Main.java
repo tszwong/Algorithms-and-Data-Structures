@@ -8,7 +8,7 @@ public class Main {
         Player andrewWiggins = new Player("Andrew", "Wiggins", 3);
 
         // create hashtable and use methods
-        arrayHash hashtable = new arrayHash();
+        ArrayHash hashtable = new arrayHash();
         hashtable.put("Curry", stephCurry);
         hashtable.put("Thompson", klayThompson);
         hashtable.put("Green", draymondGreen);  // collision caused with Player Curry
