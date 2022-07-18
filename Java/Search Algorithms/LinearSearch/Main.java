@@ -5,13 +5,13 @@ public class Main {
         System.out.println(linSearch(intArr, 52));
     }
 
-    public static boolean linSearch(int[] arr, int value) {
+    public static int linSearch(int[] arr, int value) {
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] == value) {
-                return true;
+                return i;
             }
         }
 
-        return false;
+        return -1;
     }
 }
