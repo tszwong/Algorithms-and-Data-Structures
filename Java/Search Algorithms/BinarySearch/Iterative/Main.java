@@ -9,14 +9,14 @@ public class Main {
         System.out.println(binarySearch(intArray, 8));
     }
 
-    public static boolean binarySearch(int[] arr, int val) {
+    public static int binarySearch(int[] arr, int val) {
         int start = 0;
         int end = arr.length;
 
         while (start < end) {
             int mid = (start + end) / 2;  // set the mid point
             if (arr[mid]  == val) {
-                return true;
+                return mid;
             } else if (arr[mid] < val) {
                 start = mid + 1;
             } else {
@@ -24,6 +24,6 @@ public class Main {
             }
         }
 
-        return false;  // element not found
+        return -1;  // element not found
     }
 }
