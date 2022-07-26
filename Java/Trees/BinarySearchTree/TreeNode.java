@@ -29,12 +29,48 @@ public class TreeNode {
         }
     }
 
+    public TreeNode get(int value) {
+        if (value == data) {
+            return this;
+        }
+
+        if (value < data) {
+            if (leftChild != null) {
+                return leftChild.get(value);
+            }
+        }
+
+        else {
+            if (rightChild != null) {
+                return rightChild.get(value);
+            }
+        }
+
+        return null;  // value could not be found in tree
+    }
+
+    public int min() {
+        if (leftChild == null) {
+            return data;
+        } else {
+            return leftChild.min();
+        }
+    }
+
+    public int max() {
+        if (rightChild == null) {
+            return data;
+        } else {
+            return rightChild.max();
+        }
+    }
+
     public void traverseInOrder() {
         if (leftChild != null) {  // check left subtree for the node first
             leftChild.traverseInOrder();
         }
 
-        System.out.println(data + ", ");  // display nodes
+        System.out.print(data + ", ");  // display nodes
 
         if (rightChild != null) {  // check right subtree second
             rightChild.traverseInOrder();
@@ -67,5 +103,10 @@ public class TreeNode {
 
     public void setRightChild(TreeNode rightChild) {
         this.rightChild = rightChild;
+    }
+
+    @Override
+    public String toString() {
+        return "TreeNode{" + "data=" + data + '}';
     }
 }
