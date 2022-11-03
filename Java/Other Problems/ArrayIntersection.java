@@ -26,19 +26,10 @@ public class Intersection {
             }
 
             else {
-                if (arrIndex > 0 && arr[arrIndex-1] != a1[a1Index]) {
-                    arr[arrIndex] = a1[a1Index];
-                    a1Index++;
-                    a2Index++;
-                    arrIndex++;
-                }
-
-                else {
-                    arr[arrIndex] = a1[a1Index];
-                    a1Index++;
-                    a2Index++;
-                    arrIndex++;
-                }
+                arr[arrIndex] = a1[a1Index];
+                a1Index++;
+                a2Index++;
+                arrIndex++;
             }
         }
 
